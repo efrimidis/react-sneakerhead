@@ -1,7 +1,11 @@
+import React from 'react';
 import Card from '../components/Card';
+import AppContext from '../context';
+
+function Favorites() {
+    const { likedItem, addToLiked } = React.useContext(AppContext);
 
 
-function Favorites({ items, addToLiked }) {
     return (
         <div className="content p-40">
             <div className="d-flex align-center mb-40 justify-between">
@@ -9,7 +13,7 @@ function Favorites({ items, addToLiked }) {
             </div>
 
             <div className="d-flex flex-wrap">
-                {items
+                {likedItem
                     .map((item, index) => (
                         <Card
                             key={index}

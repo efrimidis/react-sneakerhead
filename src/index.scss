@@ -124,6 +124,7 @@ header {
   .greenButton {
     position: relative;
 
+
     &:hover {
       img {
         transform: translateX(5px);
@@ -153,6 +154,11 @@ header {
 
   &:hover {
     background: lighten(#9dd558, 5%);
+  }
+
+  &:disabled {
+    background-color: #bebebe;
+    cursor: default;
   }
 
   &:active {
@@ -221,3 +227,4 @@ header {
     }
   }
 }
+
